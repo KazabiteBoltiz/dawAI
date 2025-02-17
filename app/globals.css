@@ -1,21 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Neutral and Dark Colors */
+  --gray-1: #09090e;
+  --gray-2: #1a1c26;
+  --gray-3: #3c4851;
+  --gray-4: #617077;
+  --white-3: #99a5a7;
+  --white-2: #cbd2d9;
+  --white-15: #e1e6eb;
+  --white-1: #ffffff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Warm and Earthy Tones */
+  --brown-1: #211b21;
+  --brown-2: #6b5853;
+  --brown-3: #ab684c;
+  --brown-4: #cea65f;
+  --brown-5: #e7d494;
+  --brown-6: #f9f3c0;
+
+  /* Muted and Subtle Colors */
+  --muted-1: #24131d;
+  --muted-2: #402830;
+  --muted-3: #5e423c;
+  --muted-4: #806352;
+  --muted-5: #a19477;
+  --muted-6: #bdbb93;
+
+  /* Vibrant Reds and Oranges */
+  --red-1: #4c0717;
+  --red-2: #810b0b;
+  --red-3: #a82b12;
+  --red-4: #d45c1d;
+  --red-5: #e38524;
+  --orange-1: #ebab4c;
+  --orange-2: #f1c256;
+  --orange-3: #f6dd7a;
+
+  /* Cool Greens and Blues */
+  --bluegreen-1: #03121f;
+  --bluegreen-2: #0f343f;
+  --bluegreen-3: #1a5556;
+  --bluegreen-4: #2c7d63;
+  --green-1: #4ba245;
+  --green-2: #94cc47;
+  --green-3: #eaf257;
+
+  /* Deep Blues and Teals */
+  --teal-1: #021017;
+  --teal-2: #0b3b44;
+  --teal-3: #17756e;
+  --teal-4: #30a387;
+  --teal-5: #50cd90;
+  --teal-6: #6ae291;
+  --teal-7: #c9e8a1;
+
+  /* Purple and Magenta Tones */
+  --blue-1: #17092e;
+  --blue-2: #151556;
+  --blue-3: #113f82;
+  --blue-4: #3466b0;
+  --blue-5: #71b5db;
+  --blue-6: #9ee4ef;
+  --blue-7: #d1fbf0;
+
+  /* Soft Pinks and Purples */
+  --purple-1: #261646;
+  --purple-2: #552d72;
+  --purple-3: #884b93;
+  --purple-4: #ac6ca2;
+  --purple-5: #c58faa;
+  --purple-6: #dfb2c6;
+  --purple-7: #edd1d6;
+
+  /* Rich Purples and Reds */
+  --retro-1: #140333;
+  --retro-2: #461565;
+  --retro-3: #7b2584;
+  --retro-4: #a94b84;
+  --retro-5: #d07482;
+  --retro-6: #de9e8c;
+
+  /* Bright Pinks and Reds */
+  --solar-1: #7b0d69;
+  --solar-2: #a41057;
+  --solar-3: #c3435c;
+  --solar-4: #e17676;
+  --solar-5: #f3bfad;
+
+  /* Muted Pinks and Browns */
+  --mutedpink-1: #3c133b;
+  --mutedpink-2: #6b2e5a;
+  --mutedpink-3: #aa557c;
+  --mutedpink-4: #ca867a;
+  --mutedpink-5: #f2cdaa;
+  --mutedpink-6: #faf8db;
+
+  /* Warm Browns and Yellows */
+  --gold-1: #8a4028;
+  --gold-2: #b3794d;
+  --gold-3: #dab580;
+  --gold-4: #f3e7a8;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--gray-2); /* Default text color */
+  background: var(--white-1); /* Default background color */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+  nextjs-portal {
+    display: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
